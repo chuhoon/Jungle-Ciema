@@ -1,6 +1,6 @@
 # 정글시네마 (마크업 및 scss 수정해야함)
 
-[배포링크:elephant:](https://chuhoon.github.io/Jungle-Ciema/)
+[배포링크:elephant:](https://chuhoon.github.io/Jungle-Ciema/movie.html)
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/68219145/167147111-2f032e82-1bb4-46f5-a188-d3a0c7815b25.gif)
 
