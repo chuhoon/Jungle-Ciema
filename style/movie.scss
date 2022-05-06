@@ -3,7 +3,8 @@
 
 #app {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 90px;
 }
 
@@ -16,6 +17,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   padding: 0 28px 31px 29px;
+  margin-bottom: 135px;
   .title {
     margin-top: 41px;
     margin-bottom: 37px;
@@ -63,47 +65,155 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 23px;
+
     li {
-      width: 220px;
-      box-sizing: border-box;
-      border: 1px solid #bdbdbd;
-      filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
-      border-radius: 10px;
-      padding: 19px 20px 0;
       display: flex;
       flex-direction: column;
-      .img-poster {
-        width: 180px;
-        height: 250px;
-      }
-      .movie-title {
-        font-family: 'Noto Sans KR';
-        font-size: 16px;
-        font-weight: 900;
-        line-height: 23px;
-        margin: 11px 0 12px;
-      }
+      border: 1px solid #bdbdbd;
+      // filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+      border-radius: 10px;
+      box-sizing: border-box;
+      width: 220px;
+      .cont-upperlist {
+        padding: 19px 20px 0px;
+        .img-poster {
+          width: 180px;
+          height: 250px;
+        }
+        .movie-title {
+          font-family: 'Noto Sans KR';
+          font-size: 16px;
+          font-weight: 900;
+          line-height: 23px;
+          margin: 11px 0 12px;
+          // 한줄 묶음
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
 
-      .txt-goorm {
-        font-family: 'Noto Sans KR';
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 19px;
-        color: #828282;
-        margin-bottom: 5px;
-        .txt-span {
-          color: #000;
+        .txt-goorm {
+          font-family: 'Noto Sans KR';
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 19px;
+          color: #828282;
+          margin-bottom: 5px;
+          .txt-span {
+            color: #000;
+          }
+        }
+
+        .txt-goorm.last {
+          margin-bottom: 18px;
+        }
+
+        .txt-introduce-star {
+          display: flex;
+          justify-content: space-between;
         }
       }
-
-      .txt-introduce-star {
-        display: flex;
-        justify-content: space-between;
-      }
-
       .cont-link {
+        display: flex;
+        position: relative;
+        background-color: #f2f2f2;
+        font-family: 'Noto Sans KR';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        border-radius: 0 0 10px 10px;
         border-top: 1px solid #bdbdbd;
+        .vertical-line {
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          left: 109px;
+          background-color: #bdbdbd;
+        }
+        a {
+          text-decoration: none;
+          font-family: 'Noto Sans KR';
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          color: #000;
+        }
+        .link-reservation {
+          padding: 9px 28px 12px 27px;
+        }
+        .link-preview {
+          padding: 10px 22px 8px 42px;
+          position: relative;
+          img {
+            margin-right: 2px;
+            position: absolute;
+            top: 12px;
+            left: 24px;
+          }
+        }
       }
     }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: #f2f2f2;
+}
+
+.cont-padding {
+  padding: 0 20%;
+}
+
+.cont-p {
+  margin-top: 53px;
+  margin-bottom: 36px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid #292626;
+  .p-footer {
+    display: inline-block;
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+  .img-twit,
+  .img-insta,
+  .img-face {
+    width: 24px;
+    height: 24px;
+  }
+  .link-twit,
+  .link-insta,
+  .link-face {
+    margin-left: 23px;
+    float: right;
+  }
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+  .p-change {
+    display: inline;
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    .span-change {
+      font-family: ' Noto Sans KR';
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+  }
+  .float-p {
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
   }
 }
